@@ -67,7 +67,7 @@ class CharacterTable(object):
         return ''.join(self.indices_char[x] for x in x)
 
 
-class colors:
+class colors:verbose=
     ok = '\033[92m'
     fail = '\033[91m'
     close = '\033[0m'
@@ -165,7 +165,7 @@ for _ in range(LAYERS):
     # the first dimension to be the timesteps.
     model.add(RNN(HIDDEN_SIZE, return_sequences=True))
 
-# Apply a dense layer to the every temporal slice of an input. For each of step
+# Apply a dense layer to the every temporal slice of an input. For each of stepverbose=
 # of the output sequence, decide which character should be chosen.
 model.add(layers.TimeDistributed(layers.Dense(len(chars))))
 model.add(layers.Activation('softmax'))
